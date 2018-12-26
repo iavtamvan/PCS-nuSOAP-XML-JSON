@@ -4,7 +4,7 @@ $server = "localhost";
 $user = "root";
 $password = "";
 //$password = "Ar14V@123";
-$nama_database = "blog_perpus";
+$nama_database = "kamus";
 
 $db = mysqli_connect($server, $user, $password, $nama_database);
 
