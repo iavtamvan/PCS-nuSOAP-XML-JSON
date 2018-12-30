@@ -4,17 +4,18 @@ require_once('lib/nusoap.php');
 // Create the server instance
 $server = new soap_server();
 // Initialize WSDL support
-$server->configureWSDL('hellowsdl', 'urn:hellowsdl');
+$server->configureWSDL('Hello Kamus Besar Bahasa Indonesia', 'urn:hellowsdl');
 // Register the method to expose
 $server->register('hello',                // method name
-    array('name' => 'xsd:string'),        // input parameters
-    array('return' => 'xsd:string'),      // output parameters
-    'urn:hellowsdl',                      // namespace
-    'urn:hellowsdl#hello',                // soapaction
-    'rpc',                                // style
-    'encoded',                            // use
-    'Says hello to the caller'            // documentation
+array('name' => 'xsd:string'),        // input parameters
+array('return' => 'xsd:string'),      // output parameters
+'urn:hellowsdl',                      // namespace
+'urn:hellowsdl#hello',                // soapaction
+'rpc',                                // style
+'encoded',                            // use
+'Says hello to the caller'            // documentation
 );
+
 // Define the method as a PHP function
 function hello($name) {
 
