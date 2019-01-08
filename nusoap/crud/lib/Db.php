@@ -62,7 +62,7 @@ class Db {
 	* @return (array) mixed
 	*/
 	public function getAll(){
-		$result = $this->mysqli->query("SELECT * FROM tb_katadasar limit 1000");
+		$result = $this->mysqli->query("SELECT * FROM tb_katadasar limit 100");
 		return $result->fetch_all(MYSQLI_ASSOC);
 	}
 

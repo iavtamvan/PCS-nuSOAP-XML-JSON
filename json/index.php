@@ -40,4 +40,12 @@ if ($_GET) {
     break;
     }
 }
+else {
+    $querryTzmpilData = mysqli_query($db, "Select * from tb_katadasar limit 30000");
+        $arrayJson = array();
+        while ($ambilData = mysqli_fetch_assoc($querryTzmpilData)){
+        $arrayJson[]= $ambilData;
+        }
+        echo json_encode($arrayJson);
+}
 ?>
